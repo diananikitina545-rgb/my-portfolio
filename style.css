@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #050505;
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* LINKS */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero-top,
+.hero-bottom {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #888;
+}
+
+.hero-title {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.hero-title h1 {
+    font-size: clamp(80px, 18vw, 280px);
+    line-height: 0.8;
+    letter-spacing: -10px;
+    font-weight: 700;
+}
+
+.hero-title p {
+    margin-top: 30px;
+    font-size: 16px;
+    color: #888;
+}
+
+
+/* SECTIONS */
+
+section {
+    padding: 120px 25px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 50px;
+
+    border-top: 1px solid #333;
+    padding-top: 15px;
+}
+
+.section-header span {
+    font-size: 12px;
+    color: #777;
+}
+
+.section-header h2 {
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+
+/* SHOWREEL */
+
+.video-container {
+    width: 100%;
+    background: #111;
+    overflow: hidden;
+}
+
+.video-container video {
+    width: 100%;
+    display: block;
+}
+
+
+/* PROJECTS */
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px 25px;
+}
+
+.project-video {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+
+    background: #111;
+    overflow: hidden;
+}
+
+.project-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+.project:hover .project-video video {
+    transform: scale(1.03);
+}
+
+.project-info {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 15px;
+
+    font-size: 12px;
+}
+
+.project-info h3 {
+    font-weight: normal;
+}
+
+.project-info span {
+    color: #777;
+}
+
+
+/* ABOUT */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 50px;
+}
+
+.about-big {
+    font-size: clamp(50px, 9vw, 140px);
+    line-height: 0.85;
+    letter-spacing: -5px;
+}
+
+.about-text {
+    max-width: 400px;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #aaa;
+}
+
+.about-text p + p {
+    margin-top: 30px;
+}
+
+
+/* CONTACT */
+
+.contact {
+    min-height: 80vh;
+}
+
+.email {
+    display: inline-block;
+
+    font-size: clamp(40px, 8vw, 120px);
+    line-height: 1;
+
+    margin: 80px 0;
+
+    border-bottom: 2px solid #f5f5f5;
+
+    transition: opacity 0.3s ease;
+}
+
+.email:hover {
+    opacity: 0.5;
+}
+
+.socials {
+    display: flex;
+    gap: 30px;
+
+    font-size: 12px;
+}
+
+.socials a {
+    color: #888;
+    transition: color 0.3s ease;
+}
+
+.socials a:hover {
+    color: #fff;
+}
+
+
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #333;
+
+    padding: 25px;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 11px;
+    color: #777;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .hero {
+        padding: 15px;
+    }
+
+    .hero-title h1 {
+        font-size: 22vw;
+        letter-spacing: -5px;
+    }
+
+    section {
+        padding: 80px 15px;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-big {
+        font-size: 18vw;
+    }
+
+    .email {
+        font-size: 10vw;
+        margin: 50px 0;
+    }
+
+    .socials {
+        flex-wrap: wrap;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
