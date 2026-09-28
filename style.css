@@ -95,7 +95,7 @@ section {
 
 .video-container {
     width: 100%;
-    background: #111;
+    background: #b31f1f;
     overflow: hidden;
 }
 
@@ -228,7 +228,7 @@ footer {
     justify-content: space-between;
 
     font-size: 11px;
-    color: #cc0bea;
+    color: #777;
 }
 
 
