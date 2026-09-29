@@ -262,6 +262,7 @@ section {
     .projects {
         display: flex !important;
         flex-direction: column !important;
+        gap: 0 !important;
     }
 
     .project-column {
@@ -270,28 +271,28 @@ section {
 
     .project {
         position: sticky !important;
-
         top: 70px !important;
 
         width: 100% !important;
+        margin: 0 0 60px 0 !important;
 
-        margin-bottom: 60px !important;
+        min-height: 520px !important;
     }
 
-    .project:nth-child(1) {
-        z-index: 1;
+    .project-01 {
+        z-index: 1 !important;
     }
 
-    .project:nth-child(2) {
-        z-index: 2;
+    .project-02 {
+        z-index: 2 !important;
     }
 
-    .project:nth-child(3) {
-        z-index: 3;
+    .project-03 {
+        z-index: 3 !important;
     }
 
-    .project:nth-child(4) {
-        z-index: 4;
+    .project-04 {
+        z-index: 4 !important;
     }
 
 }
