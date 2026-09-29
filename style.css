@@ -482,6 +482,10 @@ section {
         font-size: 8px !important;
     }
 
+    .project  .contact {
+         transform: none !important;
+    }
+
     .projects .project:hover {
         transform: none !important;
     }
