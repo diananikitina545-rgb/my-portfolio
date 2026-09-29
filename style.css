@@ -254,75 +254,217 @@ section {
 
 
 /* =========================================
-   MOBILE
+   CONTACT
 ========================================= */
+
+.contact {
+    position: relative;
+    padding: 120px 0 80px;
+    background: #080808;
+}
+
+.contact-number {
+    margin-bottom: 20px;
+    font-size: 11px;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+.contact-card {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 80px;
+
+    width: 100%;
+    min-height: 520px;
+
+    padding: 70px;
+
+    background: #f3f1ed;
+    border-radius: 28px;
+
+    color: #080808;
+    overflow: hidden;
+}
+
+
+/* TITLE */
+
+.contact-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.contact-title h2 {
+    margin: 0;
+
+    font-size: clamp(55px, 7vw, 110px);
+    line-height: 0.82;
+    letter-spacing: -0.07em;
+    font-weight: 800;
+}
+
+.contact-title a {
+    color: #111;
+
+    font-size: 15px;
+    text-decoration: none;
+
+    border-bottom: 1px solid #111;
+
+    width: fit-content;
+    padding-bottom: 4px;
+}
+
+
+/* FORM */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    gap: 35px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.form-field {
+    position: relative;
+}
+
+.form-field input,
+.form-field textarea {
+    width: 100%;
+
+    padding: 12px 0;
+
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+    background: transparent;
+
+    outline: none;
+
+    color: #080808;
+
+    font-family: inherit;
+    font-size: 15px;
+}
+
+.form-field textarea {
+    min-height: 80px;
+    resize: none;
+}
+
+
+/* LABELS */
+
+.form-field label {
+    position: absolute;
+
+    left: 0;
+    top: 12px;
+
+    font-size: 13px;
+    color: #888;
+
+    pointer-events: none;
+
+    transition:
+        transform 0.25s ease,
+        font-size 0.25s ease,
+        color 0.25s ease;
+}
+
+.form-field input:focus + label,
+.form-field textarea:focus + label,
+.form-field input:not(:placeholder-shown) + label,
+.form-field textarea:not(:placeholder-shown) + label {
+
+    transform: translateY(-22px);
+
+    font-size: 10px;
+    color: #111;
+}
+
+
+/* SEND BUTTON */
+
+.contact-form button {
+    align-self: flex-start;
+
+    width: 180px;
+    height: 42px;
+
+    border: 1px solid #888;
+    border-radius: 100px;
+
+    background: transparent;
+    color: #111;
+
+    font-family: inherit;
+    font-size: 11px;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.contact-form button:hover {
+    background: #111;
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* MOBILE CONTACT */
 
 @media (max-width: 700px) {
 
-    .projects {
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 0;
+    .contact {
+        padding: 80px 0 50px;
     }
 
+    .contact-card {
+        grid-template-columns: 1fr;
 
-    .project-column {
-        display: flex;
+        gap: 60px;
 
-        flex-direction: column;
+        padding: 35px 25px;
 
-        gap: 0;
+        min-height: auto;
+
+        border-radius: 20px;
     }
 
+    .contact-title h2 {
+        font-size: 65px;
+    }
 
-    .project {
-        position: sticky;
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
 
-        top: 70px;
+    .contact-form {
+        gap: 35px;
+    }
 
+    .contact-form button {
         width: 100%;
-
-        min-height: 480px;
-
-        margin-bottom: 60px;
-
-        padding: 14px;
-
-        border-radius: 18px;
-    }
-
-
-    .project-column .project:nth-child(2) {
-        z-index: 2;
-    }
-
-
-    .project-video {
-        height: 330px;
-
-        border-radius: 14px;
-    }
-
-
-    .project-info h3 {
-        font-size: 16px;
-    }
-
-
-    .project-info span {
-        font-size: 8px;
-    }
-
-
-    .project:hover {
-        transform: none;
-    }
-
-
-    .project:hover .project-video video {
-        transform: none;
     }
 
 }
