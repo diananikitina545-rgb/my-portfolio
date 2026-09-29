@@ -259,17 +259,12 @@ section {
 
 @media (max-width: 700px) {
 
-    /* =========================
-       МОБИЛЬНАЯ ВЕРСИЯ
-       ========================= */
-
     .projects {
-        display: flex !important;
-        flex-direction: column !important;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
         gap: 0 !important;
     }
 
-    /* Убираем влияние двух desktop-колонок */
     .project-column {
         display: contents !important;
     }
@@ -277,30 +272,32 @@ section {
     .project {
         position: sticky !important;
         top: 70px !important;
-
         width: 100% !important;
         margin: 0 !important;
-
         min-height: 520px !important;
-
-        /* каждый следующий лежит поверх предыдущего */
-        z-index: auto !important;
     }
 
-    /* правильная последовательность слоёв */
+    /* PROJECT 01 */
     .project-column:first-child .project:nth-child(1) {
+        grid-row: 1;
         z-index: 1 !important;
     }
 
+    /* PROJECT 02 */
     .project-column:last-child .project:nth-child(1) {
+        grid-row: 2;
         z-index: 2 !important;
     }
 
+    /* PROJECT 03 */
     .project-column:first-child .project:nth-child(2) {
+        grid-row: 3;
         z-index: 3 !important;
     }
 
+    /* PROJECT 04 */
     .project-column:last-child .project:nth-child(2) {
+        grid-row: 4;
         z-index: 4 !important;
     }
 
