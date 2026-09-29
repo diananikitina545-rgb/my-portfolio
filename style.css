@@ -111,15 +111,12 @@ section {
 
 .projects {
     display: grid;
-
     grid-template-columns: 1fr 1fr;
-
     gap: 25px;
-
     width: 100%;
-
     position: relative;
 }
+
 .project-01 {
     grid-column: 1;
     grid-row: 1;
@@ -432,27 +429,25 @@ section {
 @media (max-width: 700px) {
 
     .projects {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: none !important;
+        gap: 0 !important;
+        width: 100% !important;
     }
 
     .project {
         position: sticky;
-
         top: 70px;
 
-        width: 100%;
-
-        min-height: 480px;
+        width: 100% !important;
+        min-width: 0 !important;
 
         margin-bottom: 60px;
 
         padding: 14px;
 
         border-radius: 18px;
-
-        box-sizing: border-box;
     }
 
     .project-video {
