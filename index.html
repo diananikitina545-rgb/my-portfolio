@@ -4,539 +4,175 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Дянчик — Motion Designer</title>
+    <title>Motion Designer — Portfolio</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- ================= NAVIGATION ================= -->
+    <!-- HERO -->
+    <header class="hero">
+        <div class="hero-top">
+            <span>PORTFOLIO 2026</span>
+            <span>MOTION DESIGNER</span>
+        </div>
 
-    <header class="navbar">
+        <div class="hero-title">
+            <h1>DYANCHIK</h1>
+            <p>Motion Designer / 3D / Animation</p>
+        </div>
 
-        <a href="#top" class="logo">
-            ДЯНЧИК<span>®</span>
-        </a>
-
-        <nav>
-            <a href="#about">ABOUT</a>
-            <a href="#clients">CLIENTS</a>
-            <a href="#projects">PROJECTS</a>
-            <a href="#contact">CONTACT</a>
-        </nav>
-
-        <a href="#contact" class="nav-button">
-            CONTACT ME
-        </a>
-
+        <div class="hero-bottom">
+            <span>SCROLL TO EXPLORE</span>
+            <span>↓</span>
+        </div>
     </header>
 
 
-    <main id="top">
+    <!-- SHOWREEL -->
+    <section class="showreel">
 
-        <!-- ================= HERO ================= -->
+        <div class="section-header">
+            <span>01</span>
+            <h2>SHOWREEL</h2>
+        </div>
 
-        <section class="hero">
+        <div class="video-container">
+            <video
+                src="showreel.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                controls>
+            </video>
+        </div>
 
-            <div class="hero-title reveal">
+    </section>
 
-                <div class="small-label">
-                    MOTION DESIGNER
+
+    <!-- WORK -->
+    <section class="work">
+
+        <div class="section-header">
+            <span>02</span>
+            <h2>ИЗБРАННЫЕ КЕЙСЫ</h2>
+        </div>
+
+
+        <div class="projects">
+
+            <article class="project">
+                <div class="project-video">
+                    <video src="videos/project01.mp4" muted loop playsinline></video>
                 </div>
 
-                <h1>
-                    HI, I'M
-                    <span>ДЯНЧИК</span>
-                </h1>
+                <div class="project-info">
+                    <h3>PROJECT 01</h3>
+                    <span>3D / MOTION</span>
+                </div>
+            </article>
 
+
+            <article class="project">
+                <div class="project-video">
+                    <video src="videos/project02.mp4" muted loop playsinline></video>
+                </div>
+
+                <div class="project-info">
+                    <h3>PROJECT 02</h3>
+                    <span>ART DIRECTION / MOTION</span>
+                </div>
+            </article>
+
+
+            <article class="project">
+                <div class="project-video">
+                    <video src="videos/project03.mp4" muted loop playsinline></video>
+                </div>
+
+                <div class="project-info">
+                    <h3>PROJECT 03</h3>
+                    <span>3D / CGI</span>
+                </div>
+            </article>
+
+
+            <article class="project">
+                <div class="project-video">
+                    <video src="videos/project04.mp4" muted loop playsinline></video>
+                </div>
+
+                <div class="project-info">
+                    <h3>PROJECT 04</h3>
+                    <span>EXPERIMENTAL</span>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about">
+
+        <div class="section-header">
+            <span>03</span>
+            <h2>ABOUT</h2>
+        </div>
+
+        <div class="about-content">
+
+            <div class="about-big">
+                MOTION<br>
+                DESIGNER
             </div>
 
-
-            <div class="hero-content">
-
-                <div class="hero-description reveal">
-
-                    <p>
-                        A 3D DESIGNER PASSIONATE
-                        ABOUT CRAFTING BOLD AND
-                        MEMORABLE PROJECTS.
-                    </p>
-
-                    <span class="yellow-dot"></span>
-
-                </div>
-
-
-                <div class="hero-visual parallax">
-
-                    <div class="orb orb-one"></div>
-                    <div class="orb orb-two"></div>
-                    <div class="orb orb-three"></div>
-
-                    <div class="hero-face">
-
-                        <div class="hair"></div>
-
-                        <div class="eyes">
-                            <div class="eye">
-                                <div class="pupil"></div>
-                            </div>
-
-                            <div class="eye">
-                                <div class="pupil"></div>
-                            </div>
-                        </div>
-
-                        <div class="nose"></div>
-
-                        <div class="mouth"></div>
-
-                    </div>
-
-                </div>
-
-
-                <a href="#contact" class="hero-button">
-                    CONTACT ME
-                    <span>↗</span>
-                </a>
-
-            </div>
-
-
-            <div class="scroll-indicator">
-                <span>SCROLL TO EXPLORE</span>
-                <span class="scroll-line"></span>
-            </div>
-
-        </section>
-
-
-        <!-- ================= SHOWREEL ================= -->
-
-        <section class="showreel-section">
-
-            <div class="section-label reveal">
-                <span>01</span>
-                <p>SHOWREEL</p>
-            </div>
-
-            <div class="showreel reveal">
-
-                <video
-                    src="showreel.mp4"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                    controls>
-                </video>
-
-                <div class="video-label">
-                    <span>SHOWREEL 2026</span>
-                    <span>PLAY / PAUSE</span>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= CLIENTS ================= -->
-
-        <section class="clients-section" id="clients">
-
-            <div class="section-label reveal">
-                <span>02</span>
-                <p>CLIENTS &amp; COLLABORATIONS</p>
-            </div>
-
-
-            <div class="clients-grid">
-
-                <div class="client reveal">
-                    <span>01</span>
-                    <strong>CREATIVE<br>STUDIO</strong>
-                </div>
-
-                <div class="client reveal">
-                    <span>02</span>
-                    <strong>FUTURE<br>LAB</strong>
-                </div>
-
-                <div class="client reveal">
-                    <span>03</span>
-                    <strong>VISUAL<br>WORKS</strong>
-                </div>
-
-                <div class="client reveal">
-                    <span>04</span>
-                    <strong>DIGITAL<br>HOUSE</strong>
-                </div>
-
-                <div class="client reveal">
-                    <span>05</span>
-                    <strong>NEW<br>MEDIA</strong>
-                </div>
-
-                <div class="client reveal">
-                    <span>06</span>
-                    <strong>ART<br>DIRECTORS</strong>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= ABOUT ================= -->
-
-        <section class="about-section" id="about">
-
-            <div class="section-label reveal">
-                <span>03</span>
-                <p>ABOUT ME</p>
-            </div>
-
-
-            <div class="about-grid">
-
-                <div class="about-title reveal">
-
-                    <h2>
-                        ABOUT<br>
-                        <span>ME</span>
-                    </h2>
-
-                </div>
-
-
-                <div class="about-text reveal">
-
-                    <p class="about-big">
-                        I CREATE VISUAL
-                        EXPERIENCES THAT
-                        PEOPLE REMEMBER.
-                    </p>
-
-                    <p>
-                        Я motion designer, который работает
-                        с 3D, animation, CGI и visual direction.
-                    </p>
-
-                    <p>
-                        Люблю создавать выразительные
-                        визуальные системы, экспериментировать
-                        с формой и превращать идеи в движение.
-                    </p>
-
-                    <a href="#contact" class="gradient-button">
-                        LET'S WORK TOGETHER
-                        <span>↗</span>
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- Decorative objects -->
-
-            <div class="about-object object-purple"></div>
-            <div class="about-object object-pink"></div>
-            <div class="about-object object-blue"></div>
-
-        </section>
-
-
-        <!-- ================= PROJECTS ================= -->
-
-        <section class="projects-section" id="projects">
-
-            <div class="section-label reveal">
-                <span>04</span>
-                <p>SELECTED PROJECTS</p>
-            </div>
-
-
-            <div class="projects-intro reveal">
-
-                <h2>
-                    PROJECTS
-                </h2>
+            <div class="about-text">
+                <p>
+                    Я motion designer, работаю с 3D,
+                    анимацией и визуальными концепциями.
+                </p>
 
                 <p>
-                    A SELECTION OF MOTION,
-                    3D AND VISUAL DESIGN WORK.
+                    Создаю визуалы для брендов,
+                    музыкальных проектов, рекламы
+                    и digital-продуктов.
                 </p>
-
             </div>
 
-
-            <!-- STACKING PROJECTS -->
-
-            <div class="project-stack">
-
-
-                <!-- PROJECT 01 -->
-
-                <article class="project-card">
-
-                    <div class="project-top">
-
-                        <div class="project-number">
-                            01
-                        </div>
-
-                        <div>
-                            <p class="project-client">
-                                CLIENT
-                            </p>
-
-                            <h3>
-                                CREATIVE STUDIO
-                            </h3>
-                        </div>
-
-                        <span class="project-tag">
-                            LIVE PROJECT ↗
-                        </span>
-
-                    </div>
-
-
-                    <div class="project-image project-image-one">
-
-                        <div class="project-shape shape-a"></div>
-                        <div class="project-shape shape-b"></div>
-                        <div class="project-shape shape-c"></div>
-
-                        <span class="project-image-title">
-                            ORGANIC
-                        </span>
-
-                    </div>
-
-
-                    <div class="project-bottom">
-                        <span>3D / CGI</span>
-                        <span>2026</span>
-                    </div>
-
-                </article>
-
-
-                <!-- PROJECT 02 -->
-
-                <article class="project-card">
-
-                    <div class="project-top">
-
-                        <div class="project-number">
-                            02
-                        </div>
-
-                        <div>
-                            <p class="project-client">
-                                CLIENT
-                            </p>
-
-                            <h3>
-                                VISUAL LAB
-                            </h3>
-                        </div>
-
-                        <span class="project-tag">
-                            LIVE PROJECT ↗
-                        </span>
-
-                    </div>
-
-
-                    <div class="project-image project-image-two">
-
-                        <div class="bubble bubble-one"></div>
-                        <div class="bubble bubble-two"></div>
-                        <div class="bubble bubble-three"></div>
-                        <div class="bubble bubble-four"></div>
-
-                        <span class="project-image-title">
-                            LIQUID
-                        </span>
-
-                    </div>
-
-
-                    <div class="project-bottom">
-                        <span>ART DIRECTION / 3D</span>
-                        <span>2026</span>
-                    </div>
-
-                </article>
-
-
-                <!-- PROJECT 03 -->
-
-                <article class="project-card">
-
-                    <div class="project-top">
-
-                        <div class="project-number">
-                            03
-                        </div>
-
-                        <div>
-                            <p class="project-client">
-                                CLIENT
-                            </p>
-
-                            <h3>
-                                FUTURE MEDIA
-                            </h3>
-                        </div>
-
-                        <span class="project-tag">
-                            LIVE PROJECT ↗
-                        </span>
-
-                    </div>
-
-
-                    <div class="project-image project-image-three">
-
-                        <div class="glass-shape"></div>
-                        <div class="glass-shape glass-two"></div>
-                        <div class="glass-shape glass-three"></div>
-
-                        <span class="project-image-title">
-                            FUTURE
-                        </span>
-
-                    </div>
-
-
-                    <div class="project-bottom">
-                        <span>MOTION / CGI</span>
-                        <span>2026</span>
-                    </div>
-
-                </article>
-
-
-                <!-- PROJECT 04 -->
-
-                <article class="project-card">
-
-                    <div class="project-top">
-
-                        <div class="project-number">
-                            04
-                        </div>
-
-                        <div>
-                            <p class="project-client">
-                                CLIENT
-                            </p>
-
-                            <h3>
-                                DIGITAL HOUSE
-                            </h3>
-                        </div>
-
-                        <span class="project-tag">
-                            LIVE PROJECT ↗
-                        </span>
-
-                    </div>
-
-
-                    <div class="project-image project-image-four">
-
-                        <div class="star-shape">✦</div>
-                        <div class="star-shape star-two">✦</div>
-                        <div class="star-shape star-three">✦</div>
-
-                        <span class="project-image-title">
-                            DIGITAL
-                        </span>
-
-                    </div>
-
-
-                    <div class="project-bottom">
-                        <span>EXPERIMENTAL</span>
-                        <span>2026</span>
-                    </div>
-
-                </article>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= CONTACT ================= -->
-
-        <section class="contact-section" id="contact">
-
-            <div class="contact-decoration contact-decoration-one"></div>
-            <div class="contact-decoration contact-decoration-two"></div>
-
-
-            <div class="contact-content reveal">
-
-                <p class="contact-small">
-                    HAVE A PROJECT IN MIND?
-                </p>
-
-                <h2>
-                    LET'S<br>
-                    GET IN<br>
-                    <span>TOUCH</span>
-                </h2>
-
-                <a
-                    href="mailto:hello@example.com"
-                    class="contact-email">
-                    hello@example.com
-                </a>
-
-                <a href="mailto:hello@example.com" class="contact-button">
-                    SEND MESSAGE
-                    <span>↗</span>
-                </a>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer>
-
-        <div class="footer-logo">
-            ДЯНЧИК<span>®</span>
         </div>
 
-        <div class="footer-socials">
+    </section>
 
+
+    <!-- CONTACT -->
+    <section class="contact">
+
+        <div class="section-header">
+            <span>04</span>
+            <h2>LET'S WORK</h2>
+        </div>
+
+        <a href="mailto:hello@example.com" class="email">
+            onlynikitinadamn@gmail.com
+        </a>
+
+        <div class="socials">
             <a href="#">INSTAGRAM</a>
             <a href="#">BEHANCE</a>
-            <a href="#">VIMEO</a>
-
+            <a href="#">TIK TOK</a>
         </div>
 
-        <div class="footer-right">
+    </section>
 
-            <span>RIGA / LATVIA</span>
-            <span>© 2026</span>
 
-        </div>
-
+    <!-- FOOTER -->
+    <footer>
+        <span>© 2026 ДЯНЧИК</span>
+        <span>MOTION 3D&DESIGNER</span>
     </footer>
 
 
