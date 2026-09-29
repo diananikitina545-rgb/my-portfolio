@@ -260,69 +260,38 @@ section {
 @media (max-width: 700px) {
 
     .projects {
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 0;
+        display: flex !important;
+        flex-direction: column !important;
     }
-
 
     .project-column {
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 0;
+        display: contents !important;
     }
-
 
     .project {
-        position: sticky;
+        position: sticky !important;
 
-        top: 70px;
+        top: 70px !important;
 
-        width: 100%;
+        width: 100% !important;
 
-        min-height: 480px;
-
-        margin-bottom: 60px;
-
-        padding: 14px;
-
-        border-radius: 18px;
+        margin-bottom: 60px !important;
     }
 
+    .project:nth-child(1) {
+        z-index: 1;
+    }
 
-    .project-column .project:nth-child(2) {
+    .project:nth-child(2) {
         z-index: 2;
     }
 
-
-    .project-video {
-        height: 330px;
-
-        border-radius: 14px;
+    .project:nth-child(3) {
+        z-index: 3;
     }
 
-
-    .project-info h3 {
-        font-size: 16px;
-    }
-
-
-    .project-info span {
-        font-size: 8px;
-    }
-
-
-    .project:hover {
-        transform: none;
-    }
-
-
-    .project:hover .project-video video {
-        transform: none;
+    .project:nth-child(4) {
+        z-index: 4;
     }
 
 }
