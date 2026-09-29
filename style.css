@@ -434,37 +434,53 @@ section {
 
 @media (max-width: 700px) {
 
-    .contact {
-        padding: 80px 0 50px;
+    .projects {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
     }
 
-    .contact-card {
-        grid-template-columns: 1fr;
-
-        gap: 60px;
-
-        padding: 35px 25px;
-
-        min-height: auto;
-
-        border-radius: 20px;
+    .project-column {
+        display: contents;
     }
 
-    .contact-title h2 {
-        font-size: 65px;
-    }
+    .project {
+        position: sticky;
 
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
+        top: 70px;
 
-    .contact-form {
-        gap: 35px;
-    }
-
-    .contact-form button {
         width: 100%;
+
+        min-height: 480px;
+
+        margin-bottom: 60px;
+
+        padding: 14px;
+
+        border-radius: 18px;
+
+        box-sizing: border-box;
+    }
+
+    .project-video {
+        height: 330px;
+        border-radius: 14px;
+    }
+
+    .project-info h3 {
+        font-size: 16px;
+    }
+
+    .project-info span {
+        font-size: 8px;
+    }
+
+    .project:hover {
+        transform: none;
+    }
+
+    .project:hover .project-video video {
+        transform: none;
     }
 
 }
