@@ -331,20 +331,19 @@ footer {
 }
 
 .project:nth-child(2) {
-    top: 105px;
+    top: 80px;
     z-index: 2;
 }
 
 .project:nth-child(3) {
-    top: 130px;
+    top: 105px;
     z-index: 3;
 }
 
 .project:nth-child(4) {
-    top: 155px;
+    top: 105px;
     z-index: 4;
 }
-
 
 /* -----------------------------------------
    Верх карточки
