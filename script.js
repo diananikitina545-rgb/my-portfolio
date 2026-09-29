@@ -1,59 +1,67 @@
-const projects = document.querySelectorAll(".project");
+document.addEventListener("DOMContentLoaded", () => {
 
-projects.forEach(project => {
+    const projects = document.querySelectorAll(".project");
 
-    const video = project.querySelector("video");
+    projects.forEach((project) => {
 
-    project.addEventListener("mouseenter", () => {
-        video.play();
-    });
+        const video = project.querySelector("video");
 
-    project.addEventListener("mouseleave", () => {
-        video.pause();
-        video.currentTime = 0;
-    });
+        if (!video) return;
 
-});
-/* =========================================
-   PROJECT HOVER
-========================================= */
+        video.muted = true;
+        video.loop = true;
+        video.playsInline = true;
 
-/* =========================================
-   PROJECT VIDEOS — AUTOPLAY + LOOP
-========================================= */
 
-const projectVideos = document.querySelectorAll(".project video");
+        /* =========================
+           ПК — запуск при наведении
+        ========================= */
 
-projectVideos.forEach((video) => {
+        project.addEventListener("mouseenter", () => {
 
-    // Настройки видео
-    video.muted = true;
-    video.loop = true;
-    video.playsInline = true;
+            video.play().catch(() => {});
 
-    // Запускаем видео
-    const playVideo = () => {
-        video.play().catch(() => {
-            // Браузер может временно запретить autoplay,
-            // но после взаимодействия с сайтом видео запустится.
         });
-    };
 
-    // Пытаемся запустить сразу
-    playVideo();
+        project.addEventListener("mouseleave", () => {
 
-    // Если браузер ещё не разрешил autoplay,
-    // пробуем после первого взаимодействия пользователя
-    document.addEventListener(
-        "click",
-        playVideo,
-        { once: true }
-    );
+            video.pause();
 
-    document.addEventListener(
-        "scroll",
-        playVideo,
-        { once: true, passive: true }
-    );
+            video.currentTime = 0;
+
+        });
+
+
+        /* =========================
+           ТЕЛЕФОН — запуск при появлении
+           карточки на экране
+        ========================= */
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        video.play().catch(() => {});
+
+                    } else {
+
+                        video.pause();
+
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.35
+            }
+        );
+
+        observer.observe(project);
+
+    });
 
 });
