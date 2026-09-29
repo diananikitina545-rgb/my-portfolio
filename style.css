@@ -477,15 +477,3 @@ section {
     }
 
 }
-
-@media (max-width: 700px) {
-
-    .project {
-        position: sticky !important;
-    }
-
-    .project-info {
-        transition: opacity 0.25s ease;
-    }
-
-}
