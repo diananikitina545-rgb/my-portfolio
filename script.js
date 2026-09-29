@@ -18,30 +18,42 @@ projects.forEach(project => {
    PROJECT HOVER
 ========================================= */
 
-const projects = document.querySelectorAll(".project");
+/* =========================================
+   PROJECT VIDEOS — AUTOPLAY + LOOP
+========================================= */
 
-projects.forEach((project) => {
+const projectVideos = document.querySelectorAll(".project video");
 
-    const video = project.querySelector("video");
+projectVideos.forEach((video) => {
 
-    if (!video) return;
+    // Настройки видео
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
 
+    // Запускаем видео
+    const playVideo = () => {
+        video.play().catch(() => {
+            // Браузер может временно запретить autoplay,
+            // но после взаимодействия с сайтом видео запустится.
+        });
+    };
 
-    project.addEventListener("mouseenter", () => {
+    // Пытаемся запустить сразу
+    playVideo();
 
-        video.currentTime = 0;
+    // Если браузер ещё не разрешил autoplay,
+    // пробуем после первого взаимодействия пользователя
+    document.addEventListener(
+        "click",
+        playVideo,
+        { once: true }
+    );
 
-        video.play().catch(() => {});
-
-    });
-
-
-    project.addEventListener("mouseleave", () => {
-
-        video.pause();
-
-        video.currentTime = 0;
-
-    });
+    document.addEventListener(
+        "scroll",
+        playVideo,
+        { once: true, passive: true }
+    );
 
 });
