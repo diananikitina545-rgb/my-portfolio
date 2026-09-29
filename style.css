@@ -105,345 +105,293 @@ section {
 }
 
 
-/* PROJECTS */
+/* =========================================
+   PROJECT STACK
+========================================= */
 
 .projects {
+    position: relative;
+    width: 100%;
+
+    /* ПК — ДВЕ КОЛОНКИ */
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 80px 25px;
+
+    column-gap: 25px;
+    row-gap: 40px;
+
+    padding-bottom: 20vh;
 }
 
-.project-video {
-    width: 100%;
-    aspect-ratio: 16 / 10;
 
-    background: #111;
+/* =========================================
+   PROJECT CARD
+========================================= */
+
+.project {
+    position: sticky;
+
+    top: 80px;
+
+    width: 100%;
+    min-height: 520px;
+
+    margin: 0;
+    padding: 20px;
+
+    background: #080808;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+    border-radius: 24px;
+
     overflow: hidden;
+
+    box-sizing: border-box;
+
+    transition:
+        transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.5s ease,
+        border-color 0.3s ease;
+
+    transform-origin: center top;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================
+   DESKTOP — STACK
+========================================= */
+
+.project:nth-child(1) {
+    top: 80px;
+    z-index: 1;
+}
+
+.project:nth-child(2) {
+    top: 80px;
+    z-index: 2;
+}
+
+.project:nth-child(3) {
+    top: 105px;
+    z-index: 3;
+}
+
+.project:nth-child(4) {
+    top: 105px;
+    z-index: 4;
+}
+
+
+/* =========================================
+   PROJECT INFO
+========================================= */
+
+.project-info {
+    position: relative;
+
+    z-index: 5;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+.project-info h3 {
+    font-size: 20px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.5px;
+}
+
+.project-info span {
+    font-size: 10px;
+
+    color: #888;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   VIDEO
+========================================= */
+
+.project-video {
+    position: relative;
+
+    width: 100%;
+    height: 430px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #151515;
 }
 
 .project-video video {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
 
-    transition: transform 0.6s ease;
-}
+    display: block;
 
-.project:hover .project-video video {
-    transform: scale(1.03);
-}
-
-.project-info {
-    display: flex;
-    justify-content: space-between;
-
-    margin-top: 15px;
-
-    font-size: 12px;
-}
-
-.project-info h3 {
-    font-weight: normal;
-}
-
-.project-info span {
-    color: #777;
-}
-
-
-/* ABOUT */
-
-.about-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 50px;
-}
-
-.about-big {
-    font-size: clamp(50px, 9vw, 140px);
-    line-height: 0.85;
-    letter-spacing: -5px;
-}
-
-.about-text {
-    max-width: 400px;
-    font-size: 18px;
-    line-height: 1.5;
-    color: #aaa;
-}
-
-.about-text p + p {
-    margin-top: 30px;
+    transition:
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        filter 0.5s ease;
 }
 
 
 /* =========================================
-   CONTACT — NEW
+   HOVER
 ========================================= */
 
-.contact {
-    position: relative;
-    min-height: auto;
-    padding: 120px 25px 100px;
-    background: #12030b;
+.project:hover {
+    transform:
+        translateY(-25px)
+        scale(1.025);
+
+    border-color:
+        rgba(255, 255, 255, 0.8);
+
+    box-shadow:
+        0 40px 100px rgba(0, 0, 0, 0.7);
 }
 
-.contact-number {
-    margin-bottom: 20px;
-    font-size: 12px;
-    color: #888;
-}
-
-
-/* БЕЛАЯ КАРТОЧКА */
-
-.contact-card {
-    width: 100%;
-    min-height: 560px;
-
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 100px;
-
-    padding: 70px;
-
-    background: #f3f1ed;
-    color: #111;
-
-    border-radius: 28px;
-
-    overflow: hidden;
+.project:hover .project-video video {
+    transform: scale(1.05);
 }
 
 
-/* -----------------------------------------
-   LEFT
------------------------------------------ */
+/* остальные карточки затемняются */
 
-.contact-title {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
+.projects:has(.project:hover) .project:not(:hover) {
+    opacity: 0.55;
 
-.contact-title h2 {
-    margin: 0;
-
-    font-size: clamp(60px, 8vw, 120px);
-    line-height: 0.82;
-
-    letter-spacing: -0.07em;
-    font-weight: 800;
-}
-
-.contact-title a {
-    display: inline-block;
-
-    width: fit-content;
-
-    margin-top: 40px;
-
-    color: #111;
-
-    font-size: 15px;
-
-    text-decoration: none;
-
-    border-bottom: 1px solid #111;
-
-    padding-bottom: 5px;
+    transform: scale(0.98);
 }
 
 
-/* -----------------------------------------
-   FORM
------------------------------------------ */
+/* маленькая точка */
 
-.contact-form {
-    width: 100%;
+.project::before {
+    content: "";
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    gap: 32px;
-}
-
-.form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-}
-
-.form-field {
-    position: relative;
-    width: 100%;
-}
-
-
-/* поля */
-
-.form-field input,
-.form-field textarea {
-    width: 100%;
-
-    display: block;
-
-    padding: 12px 0;
-
-    background: transparent;
-
-    border: none;
-    border-bottom: 1px solid #999;
-
-    outline: none;
-
-    color: #111;
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
-
-    border-radius: 0;
-}
-
-.form-field textarea {
-    min-height: 90px;
-    resize: none;
-}
-
-
-/* подписи */
-
-.form-field label {
     position: absolute;
 
-    top: 12px;
-    left: 0;
+    top: 18px;
+    left: 20px;
 
-    color: #777;
+    width: 8px;
+    height: 8px;
 
-    font-size: 13px;
+    background: #fff;
 
-    pointer-events: none;
+    border-radius: 50%;
 
-    transition: all 0.25s ease;
+    opacity: 0.5;
 }
 
 
-/* подпись уходит наверх */
-
-.form-field input:focus + label,
-.form-field textarea:focus + label,
-.form-field input:not(:placeholder-shown) + label,
-.form-field textarea:not(:placeholder-shown) + label {
-    top: -12px;
-
-    font-size: 9px;
-
-    color: #111;
-}
-
-
-/* -----------------------------------------
-   SEND
------------------------------------------ */
-
-.contact-form button {
-    width: 180px;
-    height: 44px;
-
-    margin-top: 10px;
-
-    border: 1px solid #777;
-    border-radius: 100px;
-
-    background: transparent;
-
-    color: #111;
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    font-size: 10px;
-    letter-spacing: 1px;
-
-    cursor: pointer;
-
-    transition:
-        background 0.3s ease,
-        color 0.3s ease,
-        transform 0.3s ease;
-}
-
-.contact-form button:hover {
-    background: #111;
-    color: #fff;
-
-    transform: translateY(-3px);
-}
-
-/* -----------------------------------------
-   MOBILE PROJECT STACK
------------------------------------------ */
+/* =========================================
+   MOBILE — ОДНА КОЛОНКА
+========================================= */
 
 @media (max-width: 700px) {
 
     .projects {
         display: grid;
+
         grid-template-columns: 1fr;
-        gap: 0;
+
+        column-gap: 0;
+        row-gap: 0;
+
+        padding-bottom: 20vh;
     }
+
 
     .project {
         position: sticky;
 
+        top: 70px;
+
         width: 100%;
+
         min-height: 480px;
 
-        margin-bottom: 60px;
+        margin: 0 0 60px 0;
 
         padding: 14px;
-
-        top: 70px !important;
-
-        box-sizing: border-box;
 
         border-radius: 18px;
     }
 
+
+    /*
+       На телефоне все карточки
+       находятся в одной колонке.
+    */
+
+    .project:nth-child(1),
+    .project:nth-child(2),
+    .project:nth-child(3),
+    .project:nth-child(4) {
+
+        top: 70px;
+
+    }
+
+
     .project:nth-child(1) {
-        top: 70px !important;
         z-index: 1;
     }
 
     .project:nth-child(2) {
-        top: 70px !important;
         z-index: 2;
     }
 
     .project:nth-child(3) {
-        top: 70px !important;
         z-index: 3;
     }
 
     .project:nth-child(4) {
-        top: 70px !important;
         z-index: 4;
     }
 
+
     .project-video {
         height: 330px;
+
         border-radius: 14px;
     }
+
 
     .project-info h3 {
         font-size: 16px;
     }
 
+
     .project-info span {
         font-size: 8px;
     }
 
+
     .project:hover {
+        transform: none;
+    }
+
+
+    .project:hover .project-video video {
         transform: none;
     }
 
