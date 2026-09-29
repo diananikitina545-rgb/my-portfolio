@@ -425,3 +425,101 @@ section {
         width: 100%;
     }
 }
+/* =========================================
+   PROJECTS — MOBILE FIX
+========================================= */
+
+@media (max-width: 700px) {
+
+    /* проекты идут друг под другом */
+    .projects {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        width: 100%;
+    }
+
+    /* карточка */
+    .project {
+        position: sticky;
+
+        top: 70px !important;
+
+        width: 100%;
+        min-height: auto;
+
+        margin: 0 0 30px 0;
+
+        padding: 14px;
+
+        border-radius: 18px;
+    }
+
+    /* видео */
+    .project-video {
+        width: 100%;
+        height: 240px;
+
+        border-radius: 14px;
+    }
+
+    .project-video video {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+    /* информация под видео */
+    .project-info {
+        display: flex;
+
+        justify-content: space-between;
+        align-items: flex-start;
+
+        gap: 20px;
+
+        margin-top: 16px;
+        margin-bottom: 0;
+    }
+
+    .project-info h3 {
+        margin: 0;
+
+        font-size: 18px;
+
+        line-height: 1.05;
+
+        white-space: normal;
+    }
+
+    .project-info span {
+        flex: 1;
+
+        max-width: 130px;
+
+        font-size: 10px;
+
+        line-height: 1.2;
+
+        text-align: right;
+
+        color: #888;
+    }
+
+    /* убираем сильное увеличение на телефоне */
+    .project:hover {
+        transform: none;
+    }
+
+    .project:hover .project-video video {
+        transform: none;
+    }
+
+    /* когда одна карточка наведена */
+    .projects:has(.project:hover) .project:not(:hover) {
+        opacity: 1;
+        transform: none;
+    }
+
+}
