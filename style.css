@@ -120,20 +120,25 @@ section {
 
     position: relative;
 }
-
-
-/* две независимые стопки */
-
-.project-column {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 120px;
-
-    position: relative;
+.project-01 {
+    grid-column: 1;
+    grid-row: 1;
 }
 
+.project-02 {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.project-03 {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.project-04 {
+    grid-column: 2;
+    grid-row: 2;
+}
 
 /* карточка */
 
@@ -165,14 +170,6 @@ section {
         box-shadow 0.5s ease,
         border-color 0.3s ease;
 }
-
-
-/* второй лист каждой стопки */
-
-.project-column .project:nth-child(2) {
-    z-index: 2;
-}
-
 
 /* видео */
 
@@ -438,10 +435,6 @@ section {
         display: flex;
         flex-direction: column;
         gap: 0;
-    }
-
-    .project-column {
-        display: contents;
     }
 
     .project {
